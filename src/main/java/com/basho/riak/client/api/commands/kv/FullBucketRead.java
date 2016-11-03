@@ -262,7 +262,7 @@ public class FullBucketRead extends SecondaryIndexQuery<BinaryValue, FullBucketR
             public String toString()
             {
                 return "FullBucketRead.Response.Entry{" +
-                        "location=" + getRiakObjectLocation() +
+                        "location=" + getLocation() +
                         ", hasFetchedValue=" + hasFetchedValue() +
                         '}';
             }

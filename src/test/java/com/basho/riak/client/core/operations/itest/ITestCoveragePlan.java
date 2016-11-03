@@ -183,7 +183,7 @@ public class ITestCoveragePlan extends ITestAutoCleanupBase
 
                 for (BinIndexQuery.Response.Entry re: e.getValue())
                 {
-                    lst.add(re.getRiakObjectLocation().getKeyAsString());
+                    lst.add(re.getLocation().getKeyAsString());
                 }
 
                 logger.debug("{} keys were returned for CE {}:\n\t{}",

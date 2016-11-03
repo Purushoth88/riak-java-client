@@ -108,7 +108,7 @@ public class ITestRawIndexQuery extends ITestBase
 
         assertTrue(iResp.hasEntries());
         RawIndexQuery.Response.Entry<BinaryValue> first = iResp.getEntries().iterator().next();
-        assertEquals(ip.key, first.getRiakObjectLocation().getKey().toString());
+        assertEquals(ip.key, first.getLocation().getKey().toString());
         assertArrayEquals(ip.indexKey, first.getIndexKey().getValue());
     }
 

@@ -115,7 +115,7 @@ public class ITestBigIntIndexQuery extends ITestIndexBase
         for (BigIntIndexQuery.Response.Entry e : streamingResponse)
         {
             size++;
-            if (e.getRiakObjectLocation().getKey().toString().equals(expectedObjectKey))
+            if (e.getLocation().getKey().toString().equals(expectedObjectKey))
             {
                 found = true;
                 assertEquals(INDEX_ENTRY, e.getIndexKey());
@@ -133,7 +133,7 @@ public class ITestBigIntIndexQuery extends ITestIndexBase
 
         for (BigIntIndexQuery.Response.Entry e : response.getEntries())
         {
-            if (e.getRiakObjectLocation().getKey().toString().equals(expectedObjectKey))
+            if (e.getLocation().getKey().toString().equals(expectedObjectKey))
             {
                 found = true;
                 assertEquals(INDEX_ENTRY, e.getIndexKey());

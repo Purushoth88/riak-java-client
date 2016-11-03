@@ -114,7 +114,7 @@ public class ITestBinIndexQuery extends ITestIndexBase
         for (BinIndexQuery.Response.Entry e : streamingResponse)
         {
             size++;
-            if (e.getRiakObjectLocation().getKey().toString().equals(expectedObjectKey))
+            if (e.getLocation().getKey().toString().equals(expectedObjectKey))
             {
                 found = true;
                 assertEquals(expectedIndexKey, e.getIndexKey());
@@ -133,7 +133,7 @@ public class ITestBinIndexQuery extends ITestIndexBase
 
         for (BinIndexQuery.Response.Entry e : entries)
         {
-            if (e.getRiakObjectLocation().getKey().toString().equals(expectedObjectKey))
+            if (e.getLocation().getKey().toString().equals(expectedObjectKey))
             {
                 found = true;
                 assertEquals(expectedIndexKey, e.getIndexKey());

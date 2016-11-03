@@ -121,7 +121,7 @@ public class ITestIntIndexQuery extends ITestIndexBase
         for (IntIndexQuery.Response.Entry e : streamingResponse)
         {
             size++;
-            if (e.getRiakObjectLocation().getKey().toString().equals(expectedObjectKey))
+            if (e.getLocation().getKey().toString().equals(expectedObjectKey))
             {
                 found = true;
                 assertEquals(DUP_INDEX_KEY, e.getIndexKey());
@@ -137,7 +137,7 @@ public class ITestIntIndexQuery extends ITestIndexBase
         boolean found = false;
         for (IntIndexQuery.Response.Entry e : indexResponse.getEntries())
         {
-            if (e.getRiakObjectLocation().getKey().toString().equals(objectKey(1)))
+            if (e.getLocation().getKey().toString().equals(objectKey(1)))
             {
                 found = true;
                 assertEquals(DUP_INDEX_KEY, e.getIndexKey());

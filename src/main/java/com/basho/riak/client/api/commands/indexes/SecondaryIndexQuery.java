@@ -797,13 +797,13 @@ public abstract class SecondaryIndexQuery<T, S extends SecondaryIndexQuery.Respo
 
         public static class Entry<T>
         {
-            private final Location RiakObjectLocation;
+            private final Location location;
             private final BinaryValue indexKey;
             private final IndexConverter<T> converter;
 
-            protected Entry(Location riakObjectLocation, BinaryValue indexKey, IndexConverter<T> converter)
+            protected Entry(Location location, BinaryValue indexKey, IndexConverter<T> converter)
             {
-                this.RiakObjectLocation = riakObjectLocation;
+                this.location = location;
                 this.indexKey = indexKey;
                 this.converter = converter;
             }
@@ -813,9 +813,9 @@ public abstract class SecondaryIndexQuery<T, S extends SecondaryIndexQuery.Respo
              *
              * @return the location for this object in Riak.
              */
-            public Location getRiakObjectLocation()
+            public Location getLocation()
             {
-                return RiakObjectLocation;
+                return location;
             }
 
             /**
